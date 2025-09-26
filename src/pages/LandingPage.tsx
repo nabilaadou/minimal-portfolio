@@ -6,22 +6,94 @@ export function Landingpage() {
 				<div className="flex">
 					{/* personel img */}
 					<div className="absolute w-[6cm] h-[6cm] m-6 border border-white border-2">
-						<img src="./../assets/me.jpg" alt="" />
+						<img src="./../assets/me1.png" alt="" />
 					</div>
 					{/* infos */}
 					<div className="ml-[7.5cm] mt-[1.1cm] mb-[1.5cm]">
-						<div className="flex gap-2 leading-12">
-							<p className="text-[40px] font-semibold">Nabil</p>
+						<div className="flex gap-2 pb-1">
+							<p className="text-[40px] font-bold">Nabil</p>
 							<p className="text-[40px] font-light">aadou</p>
 						</div>
-						<p className="text-[18px] leading-6">Numerical Architecture Student At 1337 Coding School</p>
-						<p className="text-[18px] leading-6">Aspiring Backend Developer</p>
-						<p className="text-[18px] leading-6">nabilaadou@gmail.com</p> 
+						<p className="text-[18px] leading-tight">Numerical Architecture Student</p>
+						<p className="text-[18px] leading-tight">Building real-time web backends in TypeScript</p>
+						<p className="text-[18px] leading-tight">nabilaadou@gmail.com</p> 
 					</div>
 				</div>
-				<div className="flex gap-8 w-full h-10 items-center bg-gray-100 text-black pl-[7cm] border border-gray-400">
-					<p>about</p>
-					<p>projects</p>
+				<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black pl-[7cm] pr-[0.6cm] border border-gray-400">
+					<div className="flex gap-3 font-thin">
+						<p>Home</p>
+						<p>Projects</p>
+					</div>
+					<div className="flex gap-2 items-center"> 
+						<a
+							href="https://github.com/nabilaadou"
+							target="_blank" 
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>	
+						</a>
+						<a
+							href="https://www.linkedin.com/in/nabilaadou/"
+							target="_blank" 
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065m1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+						</a>
+						<a
+							href="https://www.codingame.com/profile/d93f81b5851ed4ac5b4accab1132a0890776436"
+							target="_blank" 
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" viewBox="0 0 24 24"><path fill="currentColor" d="M1.025 11.893c-.1.293-.07.561.009.67c.078.11.223.26.55.272s.697-.167.697-.167l-.136.78c-.008.008-.4.138-.88.134c-.661-.004-1.321-.317-1.261-1.252c.006-.081.053-.398.128-.573a1.8 1.8 0 0 1 1.105-1.073c.67-.236 1.39-.016 1.39-.016l-.141.817s-.247-.203-.755-.154a1 1 0 0 0-.323.106a.85.85 0 0 0-.383.456m3.98.594c-.08.479-.446 1.097-1.397 1.097s-1.102-.618-1.016-1.097c.217-1.134 1.394-1.077 1.394-1.077s1.195-.057 1.02 1.077zm-.887-.277c-.043-.175-.241-.169-.241-.169v.001s-.213-.017-.33.21c-.136.314-.075.514-.07.532c.043.175.24.169.24.169v-.001s.214.017.33-.21c.136-.314.075-.514.07-.532zm3.827-1.747l-.534 3.07h-.868l.043-.245a.84.84 0 0 1-.66.3c-.527 0-.813-.395-.707-1.003c.132-.76.65-1.2 1.138-1.2c.234 0 .411.099.512.275v-.002l.208-1.195zm-1.43 1.577c-.205-.004-.36.242-.402.48c-.04.238-.005.427.244.43c.15 0 .326-.088.394-.43c.028-.163.05-.48-.236-.48m3.554-.556s-.259-.174-.698 0c-.189.073-.374.308-.374.308l.058-.335h-.867l-.26 1.493h.87l.1-.573l.002-.019c.014-.071.078-.318.305-.318c.265 0 .18.334.18.334l-.198 1.159h.866l.237-1.363c.09-.525-.22-.686-.22-.686zm-1.367-.338c.22 0 .398-.156.398-.349s-.178-.349-.398-.349s-.398.156-.398.35c0 .191.178.348.398.348m3.723.146c.605 0 .818.158.818.158l.134-.768c-.405-.102-2.343-.479-2.782 1.463c-.264 1.52 1.343 1.438 1.343 1.438s.634 0 1.176-.244l.189-1.09l-.885-.003l-.1.6s-.55.147-.753-.265c-.077-.152-.025-.449-.025-.449s.117-.84.885-.84m3.21 1.032l-.21 1.209h-.788l.055-.315s-.26.366-.706.366c-.65 0-.52-.655-.52-.655s.053-.561.752-.679l.646-.071s.079-.241-.303-.241s-.763.207-.763.207l.1-.577s.516-.187.995-.163c1.01.005.742.919.742.919m-.84.258s-.158.033-.3.045c-.225.034-.253.182-.257.203c-.038.22.196.19.196.19s.248.009.338-.31zm4.29-1.178c-.512 0-.766.364-.766.364s-.098-.364-.57-.364c-.471 0-.756.376-.756.376l.056-.321h-.87l-.361 2.074h.87l.209-1.201s.07-.293.303-.293s.176.297.176.297l-.208 1.197h.872l.207-1.193s.058-.301.301-.301c.244 0 .174.309.174.309l-.21 1.184h.878l.241-1.388c0 .001.133-.74-.546-.74m4.414-.417c0 .02.01.297-.483.382c-.858.11-.96.575-.97.63c-.012.055.005.163-.032.35l-.06.394H20.62s.041.293.412.293s.63-.116.63-.116l-.087.536s-.26.134-.828.134c-.09 0-1.115-.002-.926-1.091c.091-.524.557-1.095 1.368-1.095c.38-.002.4.133.767.133c.31-.008.57-.305.57-.305s.094-.15.17-.32c.06-.082.168-.258.514-.222c.29.053.29.277.29.297zm-2.47.946c-.27 0-.333.357-.333.357h.53s.074-.357-.197-.357m2.792-1.523a.179.179 0 1 0 0 .358a.179.179 0 0 0 0-.358"/></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			{/* main section */}
+			<div className="flex gap-8 bg-white h-full">
+				{/* about me section on the left side */}
+				<div className="pl-4 pt-6 w-1/3">
+					<p className="text-[20px] font-normal">About Me</p>
+					<div className="text-[15px]">
+						<p className="leading-tight"> 
+							I am student at {" "}
+							<a 
+								href="https://um6p.ma/"
+								target="_blank" 
+    							className="text-green-900 hover:underline"
+							>
+								UM6P
+							</a> 
+							{", "}
+							<a 
+								href="https://1337.ma/en/"
+								target="_blank" 
+    							className="text-green-900 hover:underline"
+							>
+								1337 Coding School
+							</a> 
+							{" "} in Benguerir campus Morocco.
+						</p>
+						<br />
+						<p className="pb-1 leading-tight"> I currently build and study about web development applications, specially backend development. </p>
+						<p className="pb-1 leading-tight">
+  							My latest project is {" "}
+  							<a 
+    							href="https://github.com/nabilaadou/ft_transcendence" 
+    							target="_blank" 
+    							className="text-green-900 hover:underline"
+  							>
+    							Ft-transcendence
+  							</a>
+							{" "} a real-time SPA web application where one of the things I've done is designing the whole backend architecture as microservices.
+						</p>
+						<p className="pb-1 leading-tight">
+							Besides this i like competitive programing, an experience that highlights this is my participant in a CodingGame challenge where i represented my
+							school in this event where i individually ranked worldwide 172nd and my school got ranked 2nd.
+						</p>
+						<p className="pb-1 leading-tight"></p>
+					</div>
+				</div>
+				{/* recent projects section */}
+				<div className="pl-4 pt-6 w-2/3">
+					<p className="text-[20px] font-light font-normal">Recent Project</p>
 				</div>
 			</div>
 		</div>
