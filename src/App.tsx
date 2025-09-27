@@ -1,14 +1,16 @@
-import React from 'react'
+import { Routes, Route } from 'react-router-dom';
 import { Landingpage } from './pages/LandingPage'
+import { Project3 } from './pages/Project3'
+import { Project2 } from './pages/Project2'
 
 export default function App() {
 	return (
-		<div className='flex bg-gray-300 h-full justify-center'>
-			{/* <div className='flex-1'></div> */}
-			<div className='w-[30cm]'>
-				<Landingpage />
-			</div>
-			{/* <div className='flex-1'></div> */}
+		<div>
+			<Routes>
+				<Route path='/' element={<Landingpage />}/>
+				<Route path='/ft_transcendance' element={<Project3 />}/>
+				<Route path='/codeVisualizer' element={<Project2 />}/>
+			</Routes>
 		</div>
 	)
 }
