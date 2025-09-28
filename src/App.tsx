@@ -1,16 +1,16 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Landingpage } from './pages/LandingPage'
 import { Project3 } from './pages/Project3'
 import { Project2 } from './pages/Project2'
 
 export default function App() {
 	return (
-		<div>
-			<Routes>
-				<Route path='/' element={<Landingpage />}/>
-				<Route path='/projects/ft_transcendance' element={<Project3 />}/>
-				<Route path='/projects/codeVisualizer' element={<Project2 />}/>
-			</Routes>
-		</div>
+	  <BrowserRouter basename="/minimal-portfolio">
+	  	<Routes>
+	      	<Route path='/' element={<Landingpage />} />
+	      	<Route path='/projects/ft_transcendance' element={<Project3 />} />
+	      	<Route path='/projects/codeVisualizer' element={<Project2 />} />
+	    	</Routes>
+	  </BrowserRouter>
 	)
 }
