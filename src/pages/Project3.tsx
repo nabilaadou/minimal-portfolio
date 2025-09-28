@@ -19,7 +19,7 @@ export function Project3() {
 				</div>
 			</div>
 			{/* into and overview */}
-			<div className="flex flex-col gap-8 pr-[5cm] pl-[5cm]">
+			<div className="flex flex-col gap-8 items-center w-3/4 mx-auto">
 				<div className="pt-4">
 					<img src="./../assets/project-3/landing-page.png" alt="" />
 				</div>
@@ -82,7 +82,7 @@ export function Project3() {
 					</div>
 				</div>
 				{/* section 1 - images */}
-				<div className="border border-2 border-black p-2 inline-block">
+				<div className="border border-2 border-black p-1 inline-block">
   					<img src="./../assets/project-3/login.png"/>
 				</div>
 				{/* section 2 */}
@@ -105,7 +105,7 @@ export function Project3() {
 					</div>
 				</div>
 				{/* section 2 - images */}
-				<div className="border border-2 border-black p-2 inline-block">
+				<div className="border border-2 border-black p-1 inline-block">
   					<img src="./../assets/project-3/chat.png"/>
 				</div>
 				{/* section 3 */}
@@ -119,6 +119,16 @@ export function Project3() {
 							This setup not only simplifies deployment but also makes it easy to replicate the environment on any machine with minimal configuration.
 						</p>
 					</div>
+				</div>
+				<hr className="border-t-2  w-full" />
+				<div className="border border-2 border-black p-1 inline-block">
+  					<img src="./../assets/project-3/2fa-enable.png"/>
+				</div>
+				<div className="border border-2 border-black p-1 inline-block">
+  					<img src="./../assets/project-3/chat-accesibility.png"/>
+				</div>
+				<div className="border border-2 border-black p-1 inline-block">
+  					<img src="./../assets/project-3/settings-modify-name.png"/>
 				</div>
 			</div>
 		</div>

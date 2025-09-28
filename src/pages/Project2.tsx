@@ -70,7 +70,7 @@ export function Project2() {
 					</div>
 				</div>
 				{/* section 1 - images */}
-				<div className="border border-2 border-black p-2 inline-block">
+				<div className="border border-2 border-black p-1 inline-block">
   					<img src="./../assets/project-2/upload.png"/>
 				</div>
 				{/* section 2 */}
@@ -89,7 +89,7 @@ export function Project2() {
 					</div>
 				</div>
 				{/* section 2 - images */}
-				<div className="border border-2 border-black p-2 inline-block">
+				<div className="border border-2 border-black p-1 inline-block">
   					<img src="./../assets/project-2/graph.png"/>
 				</div>
 				{/* section 3 */}

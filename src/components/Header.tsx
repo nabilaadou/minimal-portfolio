@@ -1,40 +1,30 @@
 import { useState } from "react";
 
 export function Header() {
-	const [tab, setTabe] = useState<'Home' | 'Projects'>('Home');
-
 	return (
 		<div className="bg-green-900 text-white">
-			<div className="flex">
+			<div className="flex h-[2.4cm] sm:h-[3.7cm] lg:h-[5cm]">
 				{/* personel img */}
-				<div className="absolute w-[6cm] h-[6cm] ml-32 mt-6 border border-white border-2">
+				<div className="absolute w-[2.6cm] sm:w-[3.5cm] lg:w-[5cm] h-[2.6cm] sm:h-[3.5cm] lg:h-[5cm] left-4 sm:left-8 lg:left-[3cm] top-6 border border-white border-2">
 					<img src="./../assets/me1.png" alt=""/>
 				</div>
 				{/* infos */}
-				<div className="ml-[10cm] mt-[1.1cm] mb-[1.5cm]">
-					<div className="flex gap-2 pb-1">
-						<p className="text-[40px] font-bold">Nabil</p>
-						<p className="text-[40px] font-light">Aadou</p>
+				<div className="ml-[3.3cm] sm:ml-[5cm] lg:ml-[8.5cm] mr-6 mt-3 sm:mt-4 lg:mt-7">
+					<div className="flex gap-1 sm:gap-2">
+						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-bold">Nabil</p>
+						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-light">Aadou</p>
 					</div>
-					<p className="text-[18px] leading-tight">Numerical Architecture Student</p>
-					<p className="text-[18px] leading-tight">Building real-time web backends in TypeScript</p>
-					<p className="text-[18px] leading-tight">nabilaadou@gmail.com</p> 
+					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-none">Numerical Architecture Student</p>
+					<p className="hidden sm:block text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">Building real-time web backends in TypeScript</p>
+					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">nabilaadou@gmail.com</p> 
 				</div>
 			</div>
-			<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black pl-[10cm] pr-[0.6cm] border border-gray-400">
-				<div className="flex gap-3 font-thin">
-					<p 
-						className={tab === 'Home' ? 'bg-gray-300 h-full flex items-center px-2 py-2' : 'h-full flex items-center px-2 py-2'}
-					>
-						Home
-					</p>
-					<p 
-						className={tab === 'Projects' ? 'bg-gray-300 h-full flex items-center px-2 py-2' : 'h-full flex items-center px-2 py-2'}
-					>
-						Projects
-					</p>
+			{/* <div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black pl-[10cm] pr-[0.6cm] border border-gray-400"> */}
+			<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black border border-gray-400">
+				<div className="hidden sm:block font-thin ml-[5cm] lg:ml-[8.5cm]">
+					<p className='bg-gray-300 h-full flex items-center px-2 py-2 cursor-pointer'> Home </p>
 				</div>
-				<div className="flex gap-2 items-center"> 
+				<div className="hidden sm:block sm:flex gap-3 items-center pr-[0.6cm]"> 
 					<a
 						href="https://github.com/nabilaadou"
 						target="_blank" 

@@ -1,6 +1,6 @@
 export function AboutMe() {
 	return (
-		<div className="pl-4 pt-6 w-1/3">
+		<div className="ml-auto mr-2 pt-6 w-[92%]">
 			<p className="text-[20px] font-normal">About Me</p>
 			<div className="text-[15px]">
 				<p className="leading-tight"> 

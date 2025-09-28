@@ -8,8 +8,8 @@ export default function App() {
 		<div>
 			<Routes>
 				<Route path='/' element={<Landingpage />}/>
-				<Route path='/ft_transcendance' element={<Project3 />}/>
-				<Route path='/codeVisualizer' element={<Project2 />}/>
+				<Route path='/projects/ft_transcendance' element={<Project3 />}/>
+				<Route path='/projects/codeVisualizer' element={<Project2 />}/>
 			</Routes>
 		</div>
 	)

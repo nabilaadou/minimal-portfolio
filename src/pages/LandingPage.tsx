@@ -25,7 +25,7 @@ export function Project1() {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {navigate('/ft_transcendance')}}
+				onClick={() => {navigate('/projects/ft_transcendance')}}
 			>
 				... See More
 			</button> 
@@ -61,7 +61,7 @@ export function Project2() {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {navigate('/codeVisualizer')}}
+				onClick={() => {navigate('/projects/codeVisualizer')}}
 			>
 				... See More
 			</button> 
@@ -151,12 +151,11 @@ export function Project3() {
 
 function RecentProjects() {
 	return (
-		<div className="pl-4 pt-6 h-screen w-2/3">
+		<div className="ml-auto mr-2 pt-6 h-screen w-[92%]">
 			<p className="text-[20px] font-light font-normal">Recent Project</p>
 			<div className="flex flex-col gap-3">
 				<Project1 />
 				<Project2 />
-				{/* <Project3 /> */}
 			</div>
 		</div>
 	)
@@ -164,7 +163,8 @@ function RecentProjects() {
 
 function Body() {
 	return (
-		<div className="flex gap-8 bg-white h-full pl-32">
+
+		<div className="lg:flex lg:ml-auto lg:w-[94%] lg:gap-8 bg-white h-full">
 			{/* about me section on the left side */}
 			<AboutMe />
 			{/* recent projects section */}
