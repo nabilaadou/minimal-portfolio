@@ -1,4 +1,4 @@
 node_modules
-build
+dist
 pnpm-lock.yaml
 pnpm-workspace.yaml
