@@ -1,7 +1,8 @@
 {
   "name": "minimal-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "minimal portfolio",
+  "homepage": "https://nabilaadou.github.io/minimal-portfolio/",
   "main": "index.js",
   "type": "module",
   "scripts": {
