@@ -152,7 +152,7 @@ export function Project3() {
 function RecentProjects() {
 	return (
 		<div className="ml-[0.5cm] sm:ml-[1cm] mr-2 pt-6 h-screen">
-			<p className="text-[20px] font-light font-normal">Recent Project</p>
+			<p className="text-[20px] font-light font-normal">Recent Projects</p>
 			<div className="flex flex-col gap-3">
 				<Project1 />
 				<Project2 />
