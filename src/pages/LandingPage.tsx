@@ -151,7 +151,7 @@ export function Project3() {
 
 function RecentProjects() {
 	return (
-		<div className="ml-auto mr-2 pt-6 h-screen w-[92%]">
+		<div className="ml-[0.5cm] sm:ml-[1cm] mr-2 pt-6 h-screen">
 			<p className="text-[20px] font-light font-normal">Recent Project</p>
 			<div className="flex flex-col gap-3">
 				<Project1 />
@@ -164,7 +164,7 @@ function RecentProjects() {
 function Body() {
 	return (
 
-		<div className="lg:flex lg:ml-auto lg:w-[94%] lg:gap-8 bg-white h-full">
+		<div className="lg:flex lg:ml-[0.5cm] lg:gap-8 bg-white h-full">
 			{/* about me section on the left side */}
 			<AboutMe />
 			{/* recent projects section */}

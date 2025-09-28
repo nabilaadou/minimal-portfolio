@@ -5,11 +5,11 @@ export function Header() {
 		<div className="bg-green-900 text-white">
 			<div className="flex h-[2.4cm] sm:h-[3.7cm] lg:h-[5cm]">
 				{/* personel img */}
-				<div className="absolute w-[2.6cm] sm:w-[3.5cm] lg:w-[5cm] h-[2.6cm] sm:h-[3.5cm] lg:h-[5cm] left-4 sm:left-8 lg:left-[3cm] top-6 border border-white border-2">
+				<div className="absolute w-[2.6cm] sm:w-[3.5cm] lg:w-[5cm] h-[2.6cm] sm:h-[3.5cm] lg:h-[5cm] left-7 sm:left-14 lg:left-20 top-6 border border-white border-2">
 					<img src="./../assets/me1.png" alt=""/>
 				</div>
 				{/* infos */}
-				<div className="ml-[3.3cm] sm:ml-[5cm] lg:ml-[8.5cm] mr-6 mt-3 sm:mt-4 lg:mt-7">
+				<div className="ml-[3.6cm] sm:ml-[5.4cm] lg:ml-[7.8cm] mr-6 mt-3 sm:mt-4 lg:mt-7">
 					<div className="flex gap-1 sm:gap-2">
 						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-bold">Nabil</p>
 						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-light">Aadou</p>
@@ -21,7 +21,7 @@ export function Header() {
 			</div>
 			{/* <div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black pl-[10cm] pr-[0.6cm] border border-gray-400"> */}
 			<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black border border-gray-400">
-				<div className="hidden sm:block font-thin ml-[5cm] lg:ml-[8.5cm]">
+				<div className="hidden sm:block font-thin ml-[5.4cm] lg:ml-[7.8cm]">
 					<p className='bg-gray-300 h-full flex items-center px-2 py-2 cursor-pointer'> Home </p>
 				</div>
 				<div className="hidden sm:block sm:flex gap-3 items-center pr-[0.6cm]"> 
