@@ -7,6 +7,7 @@ export default function App() {
 	return (
 		<div>
 			<Landingpage />
+			
 			{/* <BrowserRouter basename="/minimal-portfolio">
 				<Routes>
 					<Route path='/' element={<Landingpage />}/>
