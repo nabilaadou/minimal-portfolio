@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export function Project1({setPage}: {setPage: Function}) {
+export function Project1() {
 	const navigate = useNavigate();
 
 	return (
@@ -25,8 +25,7 @@ export function Project1({setPage}: {setPage: Function}) {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				// onClick={() => {setPage('/project3')}}
-				onClick={() => {navigate('/minimal-portfolio/projects/ft_transcendance')}}
+				onClick={() => {navigate('/projects/ft_transcendance')}}
 			>
 				... See More
 			</button> 
@@ -42,7 +41,7 @@ export function Project1({setPage}: {setPage: Function}) {
 	)
 }
 
-export function Project2({setPage}: {setPage: Function}) {
+export function Project2() {
 	const	navigate = useNavigate();
 	return (
 		<div>
@@ -61,8 +60,7 @@ export function Project2({setPage}: {setPage: Function}) {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				// onClick={() => {setPage('/project2')}}
-				onClick={() => {navigate('/minimal-portfolio/projects/codeVisualizer')}}
+				onClick={() => {navigate('/projects/codeVisualizer')}}
 			>
 				... See More
 			</button> 
@@ -150,37 +148,37 @@ export function Project3() {
 	)
 }
 
-function RecentProjects({setPage}: {setPage: Function}) {
+function RecentProjects() {
 	return (
 		<div className="ml-[0.5cm] sm:ml-[1cm] mr-2 pt-6 h-screen">
 			<p className="text-[20px] font-light font-normal">Recent Projects</p>
 			<div className="flex flex-col gap-3">
-				<Project1 setPage={setPage} />
-				<Project2 setPage={setPage} />
+				<Project1 />
+				<Project2 />
 			</div>
 		</div>
 	)
 }
 
-function Body({setPage}: {setPage: Function}) {
+function Body() {
 	return (
 
 		<div className="lg:flex lg:ml-[0.5cm] lg:gap-8 bg-white h-full">
 			{/* about me section on the left side */}
 			<AboutMe />
 			{/* recent projects section */}
-			<RecentProjects setPage={setPage} />
+			<RecentProjects />
 		</div>
 	)
 }
 
-export function Landingpage({setPage}: {setPage: Function}) {
+export function Landingpage() {
 	return (
 		<div className="relative h-screen">
 			{/* header portion of the page */}
 			<Header />
 			{/* body section */}
-			<Body setPage={setPage}/>
+			<Body />
 		</div>
 	)
 }
