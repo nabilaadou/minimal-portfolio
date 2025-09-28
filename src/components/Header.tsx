@@ -25,11 +25,6 @@ export function Header() {
 				<div className="hidden sm:block font-thin ml-[5.4cm] lg:ml-[7.8cm]">
 					<p className='bg-gray-300 h-full flex items-center px-2 py-2 cursor-pointer'> Home </p>
 				</div>
-				{/* <nav 
-					className="bg-gray-900 px-2 py-2 flex ml-auto mr-4 md:hidden"
-					onClick={()=> {setOpen(!open)}}
-				>
-				</nav> */}
 				<img 
 					src="./../assets/nav-bar.png"
 					className="w-8 h-8 flex ml-auto mr-4 cursor-pointer md:hidden"
