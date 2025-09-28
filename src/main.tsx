@@ -5,10 +5,4 @@ import App from './App';
 
 const	root = document.getElementById('root');
 
-ReactDom.createRoot(root!).render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
-	</React.StrictMode>
-);
+ReactDom.createRoot(root!).render(<App />);
