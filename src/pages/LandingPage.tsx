@@ -1,10 +1,13 @@
 import { useState } from "react"
 import { Header } from "../components/Header";
 import { AboutMe } from "../components/AboutMe";
+import { useNavigate } from "react-router-dom";
 
 
 
 export function Project1({setPage}: {setPage: Function}) {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<a 
@@ -22,7 +25,8 @@ export function Project1({setPage}: {setPage: Function}) {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {setPage('/project3')}}
+				// onClick={() => {setPage('/project3')}}
+				onClick={() => {navigate('/minimal-portfolio/projects/ft_transcendance')}}
 			>
 				... See More
 			</button> 
@@ -39,6 +43,7 @@ export function Project1({setPage}: {setPage: Function}) {
 }
 
 export function Project2({setPage}: {setPage: Function}) {
+	const	navigate = useNavigate();
 	return (
 		<div>
 			<a 
@@ -56,7 +61,8 @@ export function Project2({setPage}: {setPage: Function}) {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {setPage('/project2')}}
+				// onClick={() => {setPage('/project2')}}
+				onClick={() => {navigate('/minimal-portfolio/projects/codeVisualizer')}}
 			>
 				... See More
 			</button> 

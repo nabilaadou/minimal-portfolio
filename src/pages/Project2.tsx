@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom"
 
 export function Project2({setPage}: {setPage: Function}) {
+	const	navigate = useNavigate();
 	return (
 		<div className="bg-gray-100 pb-[3cm]">
 			{/* header */}
 			<div className="flex justify-between p-4">
 				<button 
 					className="flex justify-start font-extrabold text-[18px] hover:underline"
-					onClick={() => {setPage('/')}}
+					// onClick={() => {setPage('/')}}
+					onClick={() => {navigate('/minimal-portfolio')}}
 				>
 					BACK
 				</button>
