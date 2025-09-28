@@ -8,7 +8,7 @@ export function Header() {
 			<div className="flex h-[2.4cm] sm:h-[3.7cm] lg:h-[5cm]">
 				{/* personel img */}
 				<div className="absolute w-[2.6cm] sm:w-[3.5cm] lg:w-[5cm] h-[2.6cm] sm:h-[3.5cm] lg:h-[5cm] left-7 sm:left-14 lg:left-20 top-6 border border-white border-2">
-					<img src="./../assets/me1.png" alt=""/>
+					<img src="/minimal-portfolio/assets/me1.png" alt=""/>
 				</div>
 				{/* infos */}
 				<div className="ml-[3.6cm] sm:ml-[5.4cm] lg:ml-[7.8cm] mr-6 mt-3 sm:mt-4 lg:mt-7">
@@ -26,7 +26,7 @@ export function Header() {
 					<p className='bg-gray-300 h-full flex items-center px-2 py-2 cursor-pointer'> Home </p>
 				</div>
 				<img 
-					src="./../assets/nav-bar.png"
+					src="/minimal-portfolio/assets/nav-bar.png"
 					className="w-8 h-8 flex ml-auto mr-4 cursor-pointer md:hidden"
 					onClick={()=> {setOpen(!open)}}
 				/>

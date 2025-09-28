@@ -1,15 +1,12 @@
-import { useNavigate } from "react-router-dom"
 
-export function Project2() {
-	const navigate = useNavigate()
-
+export function Project2({setPage}: {setPage: Function}) {
 	return (
 		<div className="bg-gray-100 pb-[3cm]">
 			{/* header */}
 			<div className="flex justify-between p-4">
 				<button 
 					className="flex justify-start font-extrabold text-[18px] hover:underline"
-					onClick={() => {navigate('/')}}
+					onClick={() => {setPage('/')}}
 				>
 					BACK
 				</button>
@@ -21,7 +18,7 @@ export function Project2() {
 			{/* into and overview */}
 			<div className="flex flex-col gap-8 w-[90%] mx-auto">
 				<div className="pt-4">
-					<img src="./../assets/project-2/landing-page.png" alt="" />
+					<img src="/minimal-portfolio/assets/project-2/landing-page.png" alt="" />
 				</div>
 				<div>
 					<p className="font-bold text-[18px] text-green-900">PYTHON CODE VISUALIZER</p>
@@ -72,7 +69,7 @@ export function Project2() {
 				</div>
 				{/* section 1 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-2/upload.png"/>
+  					<img src="/minimal-portfolio/assets/project-2/upload.png"/>
 				</div>
 				{/* section 2 */}
 				<div className="lg:flex lg:justify-between">
@@ -91,7 +88,7 @@ export function Project2() {
 				</div>
 				{/* section 2 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-2/graph.png"/>
+  					<img src="/minimal-portfolio/assets/project-2/graph.png"/>
 				</div>
 				{/* section 3 */}
 				<div className="lg:flex lg:justify-between">

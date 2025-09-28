@@ -1,13 +1,10 @@
 import { useState } from "react"
 import { Header } from "../components/Header";
 import { AboutMe } from "../components/AboutMe";
-import { useNavigate } from "react-router-dom";
 
 
 
-export function Project1() {
-	const navigate = useNavigate()
-
+export function Project1({setPage}: {setPage: Function}) {
 	return (
 		<div>
 			<a 
@@ -25,7 +22,7 @@ export function Project1() {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {navigate('/projects/ft_transcendance')}}
+				onClick={() => {setPage('/project3')}}
 			>
 				... See More
 			</button> 
@@ -41,9 +38,7 @@ export function Project1() {
 	)
 }
 
-export function Project2() {
-	const navigate = useNavigate()
-
+export function Project2({setPage}: {setPage: Function}) {
 	return (
 		<div>
 			<a 
@@ -61,7 +56,7 @@ export function Project2() {
 			</p>
 			<button
 				className="text-[15px] leading-tight hover:underline"
-				onClick={() => {navigate('/projects/codeVisualizer')}}
+				onClick={() => {setPage('/project2')}}
 			>
 				... See More
 			</button> 
@@ -149,37 +144,37 @@ export function Project3() {
 	)
 }
 
-function RecentProjects() {
+function RecentProjects({setPage}: {setPage: Function}) {
 	return (
 		<div className="ml-[0.5cm] sm:ml-[1cm] mr-2 pt-6 h-screen">
 			<p className="text-[20px] font-light font-normal">Recent Projects</p>
 			<div className="flex flex-col gap-3">
-				<Project1 />
-				<Project2 />
+				<Project1 setPage={setPage} />
+				<Project2 setPage={setPage} />
 			</div>
 		</div>
 	)
 }
 
-function Body() {
+function Body({setPage}: {setPage: Function}) {
 	return (
 
 		<div className="lg:flex lg:ml-[0.5cm] lg:gap-8 bg-white h-full">
 			{/* about me section on the left side */}
 			<AboutMe />
 			{/* recent projects section */}
-			<RecentProjects />
+			<RecentProjects setPage={setPage} />
 		</div>
 	)
 }
 
-export function Landingpage() {
+export function Landingpage({setPage}: {setPage: Function}) {
 	return (
 		<div className="relative h-screen">
 			{/* header portion of the page */}
 			<Header />
 			{/* body section */}
-			<Body />
+			<Body setPage={setPage}/>
 		</div>
 	)
 }

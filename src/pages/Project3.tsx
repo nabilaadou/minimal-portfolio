@@ -1,8 +1,5 @@
-import { useNavigate } from "react-router-dom"
 
-export function Project3() {
-	const navigate = useNavigate()
-
+export function Project3({setPage}: {setPage: Function}) {
 	return (
 		<div className="bg-gray-100 pb-[3cm]">
 			{/* header */}
@@ -10,7 +7,7 @@ export function Project3() {
 			<div className="flex justify-between p-4">
 				<button 
 					className="flex justify-start font-extrabold text-[18px] hover:underline"
-					onClick={() => {navigate('/')}}
+					onClick={() => {setPage('/')}}
 				>
 					BACK
 				</button>
@@ -22,7 +19,7 @@ export function Project3() {
 			{/* into and overview */}
 			<div className="flex flex-col gap-8 w-[90%] mx-auto">
 				<div className="pt-4">
-					<img src="./../assets/project-3/landing-page.png" alt="" />
+					<img src="/minimal-portfolio/assets/project-3/landing-page.png" alt="" />
 				</div>
 				<div>
 					<p className="font-bold text-[18px] text-green-900">FT-TRANCSENDANCE</p>
@@ -85,7 +82,7 @@ export function Project3() {
 				</div>
 				{/* section 1 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-3/login.png"/>
+  					<img src="/minimal-portfolio/assets/project-3/login.png"/>
 				</div>
 				{/* section 2 */}
 				<div className="lg:flex lg:justify-between">
@@ -108,7 +105,7 @@ export function Project3() {
 				</div>
 				{/* section 2 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-3/chat.png"/>
+  					<img src="/minimal-portfolio/assets/project-3/chat.png"/>
 				</div>
 				{/* section 3 */}
 				<div className="lg:flex lg:justify-between">
@@ -124,13 +121,13 @@ export function Project3() {
 				</div>
 				<hr className="border-t-2  w-full" />
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-3/2fa-enable.png"/>
+  					<img src="/minimal-portfolio/assets/project-3/2fa-enable.png"/>
 				</div>
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-3/chat-accesibility.png"/>
+  					<img src="/minimal-portfolio/assets/project-3/chat-accesibility.png"/>
 				</div>
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="./../assets/project-3/settings-modify-name.png"/>
+  					<img src="/minimal-portfolio/assets/project-3/settings-modify-name.png"/>
 				</div>
 			</div>
 		</div>
