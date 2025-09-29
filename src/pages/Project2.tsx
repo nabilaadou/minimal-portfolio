@@ -21,7 +21,7 @@ export function Project2() {
 			{/* into and overview */}
 			<div className="flex flex-col gap-8 w-[90%] mx-auto">
 				<div className="pt-4">
-					<img src="/minimal-portfolio/assets/project-2/landing-page.png" alt="" />
+					<img src="./assets/project-2/landing-page.png" alt="" />
 				</div>
 				<div>
 					<p className="font-bold text-[18px] text-green-900">PYTHON CODE VISUALIZER</p>
@@ -72,7 +72,7 @@ export function Project2() {
 				</div>
 				{/* section 1 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="/minimal-portfolio/assets/project-2/upload.png"/>
+  					<img src="./assets/project-2/upload.png"/>
 				</div>
 				{/* section 2 */}
 				<div className="lg:flex lg:justify-between">
@@ -91,7 +91,7 @@ export function Project2() {
 				</div>
 				{/* section 2 - images */}
 				<div className="border border-2 border-black p-1 inline-block">
-  					<img src="/minimal-portfolio/assets/project-2/graph.png"/>
+  					<img src="./assets/project-2/graph.png"/>
 				</div>
 				{/* section 3 */}
 				<div className="lg:flex lg:justify-between">

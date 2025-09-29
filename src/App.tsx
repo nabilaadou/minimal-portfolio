@@ -2,7 +2,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Landingpage } from './pages/LandingPage'
 import { Project3 } from './pages/Project3'
 import { Project2 } from './pages/Project2'
-import { useState } from 'react';
 
 export default function App() {
 	return (
