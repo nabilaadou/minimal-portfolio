@@ -163,3 +163,4 @@ The author later approved reading-time information, additional tags, and general
 ## Deployment preparation
 
 - Added the existing `nabilaadou.com` custom-domain configuration to the source assets so future production builds preserve it automatically.
+- Added generated GitHub Pages entry files for `/blogs` and `/blogs/1`, plus a general `404.html` fallback, so direct visits and page refreshes load the React application correctly.
