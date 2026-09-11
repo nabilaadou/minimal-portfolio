@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
 	const	[open, setOpen] = useState(false);
@@ -16,14 +17,38 @@ export function Header() {
 						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-bold">Nabil</p>
 						<p className="text-[20px] sm:text-[35px] lg:text-[40px] font-light">Aadou</p>
 					</div>
-					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-none">Numerical Architecture Student</p>
-					<p className="hidden sm:block text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">Building real-time web backends in TypeScript</p>
-					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">nabilaadou@gmail.com</p> 
+					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-none">Computer architecture Student</p>
+					<p className="hidden sm:block text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">Building software using Java</p>
+					<p className="text-[12px] sm:text-[16px] lg:text-[17px] leading-tight">nabilaadou@gmail.com</p>
 				</div>
 			</div>
-			<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black border border-gray-400">
-				<div className="hidden sm:block font-thin ml-[5.4cm] lg:ml-[7.8cm]">
-					<p className='bg-gray-300 h-full flex items-center px-2 py-2 cursor-pointer'> Home </p>
+			<div className="flex justify-between w-full h-10 items-center bg-gray-100 text-black border border-gray-400 overflow-hidden">
+				<div className="hidden sm:flex gap-3 font-thin ml-[5.4cm] lg:ml-[7.8cm] items-end h-full">
+					<NavLink
+						to="/"
+						end
+						className={({ isActive }) =>
+							`flex items-center h-full px-3 py-2 cursor-pointer transition-all border border-gray-400 ${
+								isActive
+									? "bg-gray-300 text-black border-b-[1px] border-[#0b5d3f] border-t-gray-400 border-l-gray-400 border-r-gray-400"
+									: "bg-gray-100 text-gray-700 hover:bg-gray-300 border-transparent"
+							}`
+						}
+					>
+						Home
+					</NavLink>
+					<NavLink
+						to="/blogs"
+						className={({ isActive }) =>
+							`flex items-center h-full px-3 py-2 cursor-pointer transition-all border border-gray-400 ${
+								isActive
+									? "bg-gray-200 text-black border-b-[1px] border-[#0b5d3f] border-t-gray-400 border-l-gray-400 border-r-gray-400"
+									: "bg-gray-100 text-gray-700 hover:bg-gray-300 border-transparent"
+							}`
+						}
+					>
+						Blog
+					</NavLink>
 				</div>
 				{/* <nav 
 					className="bg-gray-900 px-2 py-2 flex ml-auto mr-4 md:hidden"
@@ -58,6 +83,12 @@ export function Header() {
 			</div>
 			{open &&
 				<div className="md:hidden flex flex-col gap-2 h-30 bg-gray-100 text-black p-4 border-b border-gray-400">
+					<NavLink to="/" end className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
+						Home
+					</NavLink>
+					<NavLink to="/blogs" className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
+						Blog
+					</NavLink>
 					<a
 						href="https://github.com/nabilaadou"
 						target="_blank"

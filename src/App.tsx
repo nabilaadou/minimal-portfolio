@@ -1,15 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import { Landingpage } from './pages/LandingPage'
-import { Project3 } from './pages/Project3'
-import { Project2 } from './pages/Project2'
+import { Landingpage } from './pages/LandingPage';
+import { Blog1, BlogListPage } from './pages/Blog1';
 
 export default function App() {
 	return (
 		<div>
 			<Routes>
 				<Route path='/' element={<Landingpage />}/>
-				<Route path='/projects/ft_transcendance' element={<Project3 />}/>
-				<Route path='/projects/codeVisualizer' element={<Project2 />}/>
+				<Route path='/blogs' element={<BlogListPage />}/>
+				<Route path='/blogs/1' element={<Blog1 />}/>
 			</Routes>
 		</div>
 	)
