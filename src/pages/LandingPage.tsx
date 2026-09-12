@@ -14,7 +14,7 @@ function BlogPreview() {
 				className="text-left font-semibold text-green-900 hover:underline"
 				onClick={() => {navigate('/blogs/1')}}
 			>
-				Java Program/Application Execution Process
+				Java Program/Application Execution Process — Part 1: Class Loading
 			</button>
 			<div className="mt-1 flex items-center gap-3 text-[12px] uppercase tracking-[0.08em] text-gray-500">
 				<span>Aug 23, 2026</span>

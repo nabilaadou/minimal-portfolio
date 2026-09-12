@@ -15,10 +15,10 @@ This file records every category of change between the supplied Notion draft and
 
 | Draft | Website | Reason |
 | --- | --- | --- |
-| `Java Program/Application execution process` | `Java Program/Application Execution Process` | Capitalization only. |
+| `Java Program/Application execution process` | `Java Program/Application Execution Process — Part 1: Class Loading` | Capitalization corrected; the author later requested that the title explicitly identify the article as Part 1 and name its Class Loading scope. |
 | No separate card excerpt | A one-sentence summary derived from the first sentence | The homepage and blog list require a short preview. It does not add a new technical claim. |
 
-The first version of the website edit used the title “What Happens When You Compile and Run a Java Program? Part 1: Class Loading.” That rewrite has been removed and the original title restored.
+The first version of the website edit used the title “What Happens When You Compile and Run a Java Program? Part 1: Class Loading.” That rewrite was removed. The author later requested an explicit part and topic in the title, producing the current title while preserving the original wording as its base.
 
 ## Global spelling, grammar, and terminology corrections
 

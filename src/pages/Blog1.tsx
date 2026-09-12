@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
-const articleTitle = "Java Program/Application Execution Process";
+const articleTitle = "Java Program/Application Execution Process — Part 1: Class Loading";
 const articleExcerpt =
 	"Running a Java program requires compiling .java source files into .class bytecode and then launching the program on the JVM.";
 const readingTime = "9 min read";
@@ -308,7 +308,7 @@ export function Blog1() {
 
 				<header className="mt-6 max-w-4xl border-b border-gray-200 pb-9">
 					<p className="text-xs font-semibold uppercase tracking-[0.16em] text-green-700">
-						Java series · Part 1
+						Java series · Part 1 · Class loading
 					</p>
 					<h1 className="mt-3 text-3xl font-semibold leading-[1.16] text-green-950 sm:text-5xl">
 						{articleTitle}
