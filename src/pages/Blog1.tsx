@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
@@ -104,32 +104,48 @@ function useDocumentTitle(title: string) {
 }
 
 function ReadingProgress() {
-	const [progress, setProgress] = useState(0);
+	const progressBarRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
+		let animationFrameId: number | null = null;
+
 		const updateProgress = () => {
+			animationFrameId = null;
 			const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
 			const nextProgress = scrollableHeight > 0
-				? Math.min(100, Math.max(0, (window.scrollY / scrollableHeight) * 100))
+				? Math.min(1, Math.max(0, window.scrollY / scrollableHeight))
 				: 0;
-			setProgress(nextProgress);
+
+			if (progressBarRef.current) {
+				progressBarRef.current.style.transform = `scaleX(${nextProgress})`;
+			}
 		};
 
-		updateProgress();
-		window.addEventListener("scroll", updateProgress, { passive: true });
-		window.addEventListener("resize", updateProgress);
+		const scheduleUpdate = () => {
+			if (animationFrameId === null) {
+				animationFrameId = window.requestAnimationFrame(updateProgress);
+			}
+		};
+
+		scheduleUpdate();
+		window.addEventListener("scroll", scheduleUpdate, { passive: true });
+		window.addEventListener("resize", scheduleUpdate);
 
 		return () => {
-			window.removeEventListener("scroll", updateProgress);
-			window.removeEventListener("resize", updateProgress);
+			window.removeEventListener("scroll", scheduleUpdate);
+			window.removeEventListener("resize", scheduleUpdate);
+			if (animationFrameId !== null) {
+				window.cancelAnimationFrame(animationFrameId);
+			}
 		};
 	}, []);
 
 	return (
-		<div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-1" aria-hidden="true">
+		<div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[3px]" aria-hidden="true">
 			<div
-				className="h-full bg-green-700 transition-[width] duration-150"
-				style={{ width: `${progress}%` }}
+				ref={progressBarRef}
+				className="h-full origin-left bg-green-700 will-change-transform"
+				style={{ transform: "scaleX(0)" }}
 			/>
 		</div>
 	);
@@ -392,11 +408,18 @@ export function Blog1() {
 						</section>
 
 						<figure className="my-10 overflow-hidden border border-gray-200 bg-gray-50">
-							<a href="/assets/jvm-architecture.jpeg" target="_blank" rel="noreferrer" aria-label="Open the JVM architecture diagram at full size">
+							<a href="/assets/jvm-architecture-1600.webp" target="_blank" rel="noreferrer" aria-label="Open the JVM architecture diagram at full size">
 								<img
-									src="/assets/jvm-architecture.jpeg"
+									src="/assets/jvm-architecture-960.webp"
+									srcSet="/assets/jvm-architecture-960.webp 960w, /assets/jvm-architecture-1600.webp 1600w"
+									sizes="(min-width: 1024px) 768px, calc(100vw - 40px)"
 									alt="JVM architecture diagram showing the Class Loader Subsystem, runtime data areas, execution engine, JNI, and native libraries"
 									className="h-auto w-full cursor-zoom-in"
+									width="2816"
+									height="1536"
+									loading="lazy"
+									decoding="async"
+									fetchPriority="low"
 								/>
 							</a>
 							<figcaption className="border-t border-gray-200 px-4 py-3 text-sm leading-6 text-gray-600">

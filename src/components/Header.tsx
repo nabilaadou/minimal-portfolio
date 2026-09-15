@@ -2,14 +2,25 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export function Header() {
-	const	[open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<div className="bg-green-900 text-white">
 			<div className="flex h-[2.4cm] sm:h-[3.7cm] lg:h-[5cm]">
-				{/* personel img */}
-				<div className="absolute w-[2.6cm] sm:w-[3.5cm] lg:w-[5cm] h-[2.6cm] sm:h-[3.5cm] lg:h-[5cm] left-7 sm:left-14 lg:left-20 top-6 border border-white border-2">
-					<img src="./../assets/me1.png" alt=""/>
+				{/* personal image */}
+				<div className="absolute left-7 top-6 h-[2.6cm] w-[2.6cm] border-2 border-white sm:left-14 sm:h-[3.5cm] sm:w-[3.5cm] lg:left-20 lg:h-[5cm] lg:w-[5cm]">
+					<img
+						src="/assets/me1-256.webp"
+						srcSet="/assets/me1-256.webp 256w, /assets/me1-512.webp 512w"
+						sizes="(min-width: 1024px) 189px, (min-width: 640px) 132px, 98px"
+						alt="Portrait of Nabil Aadou"
+						className="h-full w-full object-cover"
+						width="512"
+						height="512"
+						loading="eager"
+						decoding="async"
+						fetchPriority="high"
+					/>
 				</div>
 				{/* infos */}
 				<div className="ml-[3.6cm] sm:ml-[5.4cm] lg:ml-[7.8cm] mr-6 mt-3 sm:mt-4 lg:mt-7">
@@ -55,11 +66,22 @@ export function Header() {
 					onClick={()=> {setOpen(!open)}}
 				>
 				</nav> */}
-				<img 
-					src="./../assets/nav-bar.png"
-					className="w-8 h-8 flex ml-auto mr-4 cursor-pointer md:hidden"
-					onClick={()=> {setOpen(!open)}}
-				/>
+				<button
+					type="button"
+					className="ml-auto mr-4 flex h-8 w-8 items-center justify-center text-gray-800 sm:hidden"
+					onClick={() => setOpen((isOpen) => !isOpen)}
+					aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+					aria-expanded={open}
+					aria-controls="mobile-navigation"
+				>
+					<svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+						{open ? (
+							<path d="M6 6l12 12M18 6L6 18" />
+						) : (
+							<path d="M4 7h16M4 12h16M4 17h16" />
+						)}
+					</svg>
+				</button>
 				<div className="hidden sm:block sm:flex gap-3 items-center pr-[0.6cm]"> 
 					<a
 						href="https://github.com/nabilaadou"
@@ -82,11 +104,11 @@ export function Header() {
 				</div>
 			</div>
 			{open &&
-				<div className="md:hidden flex flex-col gap-2 h-30 bg-gray-100 text-black p-4 border-b border-gray-400">
-					<NavLink to="/" end className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
+				<div id="mobile-navigation" className="flex flex-col gap-2 border-b border-gray-400 bg-gray-100 p-4 text-black sm:hidden">
+					<NavLink onClick={() => setOpen(false)} to="/" end className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
 						Home
 					</NavLink>
-					<NavLink to="/blogs" className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
+					<NavLink onClick={() => setOpen(false)} to="/blogs" className={({ isActive }) => `flex gap-3 items-center ${isActive ? "font-semibold text-green-900" : ""}`}>
 						Blog
 					</NavLink>
 					<a

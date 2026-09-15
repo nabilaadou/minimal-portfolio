@@ -164,3 +164,15 @@ The author later approved reading-time information, additional tags, and general
 
 - Added the existing `nabilaadou.com` custom-domain configuration to the source assets so future production builds preserve it automatically.
 - Added generated GitHub Pages entry files for `/blogs` and `/blogs/1`, plus a general `404.html` fallback, so direct visits and page refreshes load the React application correctly.
+
+## Performance and responsiveness
+
+- Reworked the reading-progress indicator to update a GPU-friendly `transform: scaleX()` inside `requestAnimationFrame`, instead of changing React state and layout width on every scroll event.
+- Replaced the 5.1 MB profile PNG with responsive 256 px and 512 px WebP variants of approximately 8 KB and 28 KB.
+- Replaced the 2.6 MB JVM diagram JPEG with responsive 960 px and 1600 px WebP variants of approximately 40 KB and 80 KB.
+- Added explicit image dimensions and responsive `srcset`/`sizes` hints to prevent layout movement and avoid downloading more pixels than each device needs.
+- Prioritized the above-the-fold profile image, while lazy-loading and asynchronously decoding the below-the-fold JVM diagram.
+- Replaced the separate raster mobile-menu image with a small inline SVG icon, eliminating an image request and improving the menu button's accessibility.
+- Split the blog code into a lazy-loaded route chunk with a lightweight loading state, reducing the JavaScript required for the homepage's initial render without leaving a blank transition on slower connections.
+- Removed the superseded PNG/JPEG/menu-image files from the active assets; they remain recoverable from Git history.
+- No article prose or technical content was changed during this optimization.
